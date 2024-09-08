@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" style="display: block;margin-right: auto;margin-left: auto;width: 500px;margin-bottom: 20px;height: 30px;" placeholder="username" required>
+        <input type="password" name="password" style="display: block;margin-right: auto;margin-left: auto;width: 500px;height: 30px;"placeholder="password" required>
+        <input type="submit"  id="submit" style="display: block;margin-right: auto;margin-left: auto;">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+    <h1>Personal Blog</h1>
+    <a href="{% url 'creat'%}" id="add">add +</a>
+    
+    <ul>
+        {% for blog in blogs %}
+        
+             
+                
+            
+        <a href="{% url 'blog' blog.id %}"><li>{{blog.name}}
+           <span id="sp">{{blog.creatd}}</span><a href="{% url 'delete' blog.id %}" id="dl">delete</a><a href="{% url 'updata' blog.id %}" id="up">updata</a></li></a>
+            
+           
+        
+        {% endfor %}
+        </ul>
+    
+</body>
+</html>
